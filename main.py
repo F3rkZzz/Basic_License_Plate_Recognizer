@@ -21,6 +21,7 @@ class BLPR(QtWidgets.QMainWindow):
     def clear_legacy(self): # Функция очистки поля с историей распознаваний
         self.ui.image_place.setPixmap(QtGui.QPixmap(""))  # Очистка места для изображения
         self.ui.history_legacy.setPlainText("")  # Очистка истории распознавания
+        self.data_for_export = [] # Очистка массива
         
     def recognize_num(self): # Функция распознавания номерного знака
         file_name, _ = QtWidgets.QFileDialog.getOpenFileName(self, "Открыть файл", os.path.join(os.path.expanduser('~'), 'Desktop'), "Форматы изображений (*.jpg *.png *.bmp *.tiff)") # Выбор изображения для дальнейшего распознавания
