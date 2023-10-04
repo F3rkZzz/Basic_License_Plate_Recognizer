@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'design.ui'
+# Form implementation generated from reading ui file 'design_v2.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
@@ -14,8 +14,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1255, 875)
-        MainWindow.setMinimumSize(QtCore.QSize(1255, 875))
+        MainWindow.resize(1355, 936)
+        MainWindow.setMinimumSize(QtCore.QSize(1355, 936))
         font = QtGui.QFont()
         font.setFamily("Century Gothic")
         font.setPointSize(12)
@@ -28,6 +28,31 @@ class Ui_MainWindow(object):
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)
         self.gridLayout.setObjectName("gridLayout")
+        spacerItem = QtWidgets.QSpacerItem(10, 15, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        self.gridLayout.addItem(spacerItem, 0, 0, 1, 3)
+        self.image_place = QtWidgets.QLabel(self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.image_place.sizePolicy().hasHeightForWidth())
+        self.image_place.setSizePolicy(sizePolicy)
+        self.image_place.setAutoFillBackground(False)
+        self.image_place.setStyleSheet("border:1px solid #7a7a7a;\n"
+"background:white;")
+        self.image_place.setText("")
+        self.image_place.setScaledContents(True)
+        self.image_place.setAlignment(QtCore.Qt.AlignCenter)
+        self.image_place.setOpenExternalLinks(False)
+        self.image_place.setObjectName("image_place")
+        self.gridLayout.addWidget(self.image_place, 2, 0, 1, 2)
+        self.history_label = QtWidgets.QLabel(self.centralwidget)
+        font = QtGui.QFont()
+        font.setFamily("Century Gothic")
+        font.setPointSize(14)
+        self.history_label.setFont(font)
+        self.history_label.setAlignment(QtCore.Qt.AlignCenter)
+        self.history_label.setObjectName("history_label")
+        self.gridLayout.addWidget(self.history_label, 1, 2, 1, 1)
         self.clear_button = QtWidgets.QPushButton(self.centralwidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.MinimumExpanding)
         sizePolicy.setHorizontalStretch(0)
@@ -35,10 +60,10 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.clear_button.sizePolicy().hasHeightForWidth())
         self.clear_button.setSizePolicy(sizePolicy)
         self.clear_button.setMinimumSize(QtCore.QSize(250, 60))
-        self.clear_button.setMaximumSize(QtCore.QSize(16777215, 70))
+        self.clear_button.setMaximumSize(QtCore.QSize(16777215, 80))
         font = QtGui.QFont()
         font.setFamily("Century Gothic")
-        font.setPointSize(14)
+        font.setPointSize(18)
         font.setBold(True)
         font.setWeight(75)
         self.clear_button.setFont(font)
@@ -59,7 +84,7 @@ class Ui_MainWindow(object):
 "color:#f0f0f0;\n"
 "}")
         self.clear_button.setObjectName("clear_button")
-        self.gridLayout.addWidget(self.clear_button, 4, 2, 1, 1)
+        self.gridLayout.addWidget(self.clear_button, 5, 2, 1, 1)
         self.load_label = QtWidgets.QLabel(self.centralwidget)
         font = QtGui.QFont()
         font.setFamily("Century Gothic")
@@ -75,10 +100,10 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.export_data_button.sizePolicy().hasHeightForWidth())
         self.export_data_button.setSizePolicy(sizePolicy)
         self.export_data_button.setMinimumSize(QtCore.QSize(250, 60))
-        self.export_data_button.setMaximumSize(QtCore.QSize(16777215, 70))
+        self.export_data_button.setMaximumSize(QtCore.QSize(16777215, 80))
         font = QtGui.QFont()
         font.setFamily("Century Gothic")
-        font.setPointSize(14)
+        font.setPointSize(18)
         font.setBold(True)
         font.setWeight(75)
         self.export_data_button.setFont(font)
@@ -124,12 +149,12 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.recognize_num_button.sizePolicy().hasHeightForWidth())
         self.recognize_num_button.setSizePolicy(sizePolicy)
-        self.recognize_num_button.setMinimumSize(QtCore.QSize(981, 125))
-        self.recognize_num_button.setMaximumSize(QtCore.QSize(16777215, 140))
+        self.recognize_num_button.setMinimumSize(QtCore.QSize(250, 60))
+        self.recognize_num_button.setMaximumSize(QtCore.QSize(16777215, 80))
         self.recognize_num_button.setBaseSize(QtCore.QSize(0, 0))
         font = QtGui.QFont()
         font.setFamily("Century Gothic")
-        font.setPointSize(36)
+        font.setPointSize(32)
         font.setBold(True)
         font.setWeight(75)
         self.recognize_num_button.setFont(font)
@@ -150,32 +175,39 @@ class Ui_MainWindow(object):
 "color:#f0f0f0;\n"
 "}")
         self.recognize_num_button.setObjectName("recognize_num_button")
-        self.gridLayout.addWidget(self.recognize_num_button, 3, 0, 2, 2)
-        self.history_label = QtWidgets.QLabel(self.centralwidget)
-        font = QtGui.QFont()
-        font.setFamily("Century Gothic")
-        font.setPointSize(14)
-        self.history_label.setFont(font)
-        self.history_label.setAlignment(QtCore.Qt.AlignCenter)
-        self.history_label.setObjectName("history_label")
-        self.gridLayout.addWidget(self.history_label, 1, 2, 1, 1)
-        spacerItem = QtWidgets.QSpacerItem(10, 15, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
-        self.gridLayout.addItem(spacerItem, 0, 0, 1, 3)
-        self.image_place = QtWidgets.QLabel(self.centralwidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout.addWidget(self.recognize_num_button, 5, 0, 1, 2)
+        self.base_of_nums_button = QtWidgets.QPushButton(self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.MinimumExpanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.image_place.sizePolicy().hasHeightForWidth())
-        self.image_place.setSizePolicy(sizePolicy)
-        self.image_place.setAutoFillBackground(False)
-        self.image_place.setStyleSheet("border:1px solid #7a7a7a;\n"
-"background:white;")
-        self.image_place.setText("")
-        self.image_place.setScaledContents(True)
-        self.image_place.setAlignment(QtCore.Qt.AlignCenter)
-        self.image_place.setOpenExternalLinks(False)
-        self.image_place.setObjectName("image_place")
-        self.gridLayout.addWidget(self.image_place, 2, 0, 1, 2)
+        sizePolicy.setHeightForWidth(self.base_of_nums_button.sizePolicy().hasHeightForWidth())
+        self.base_of_nums_button.setSizePolicy(sizePolicy)
+        self.base_of_nums_button.setMinimumSize(QtCore.QSize(250, 60))
+        self.base_of_nums_button.setMaximumSize(QtCore.QSize(16777215, 80))
+        font = QtGui.QFont()
+        font.setFamily("Century Gothic")
+        font.setPointSize(32)
+        font.setBold(True)
+        font.setWeight(75)
+        self.base_of_nums_button.setFont(font)
+        self.base_of_nums_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.base_of_nums_button.setMouseTracking(True)
+        self.base_of_nums_button.setStyleSheet("QPushButton{\n"
+"border:1px solid #7a7a7a;\n"
+"background:white;\n"
+"}\n"
+"QPushButton:hover{\n"
+"border:1px solid black;\n"
+"background:black;\n"
+"color:white;\n"
+"}\n"
+"QPushButton:pressed{\n"
+"border:1px solid white;\n"
+"background:black;\n"
+"color:#f0f0f0;\n"
+"}")
+        self.base_of_nums_button.setObjectName("base_of_nums_button")
+        self.gridLayout.addWidget(self.base_of_nums_button, 3, 0, 1, 2)
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setSizeGripEnabled(True)
@@ -188,6 +220,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Basic License Plate Recognizer"))
+        self.history_label.setText(_translate("MainWindow", "История распознаваний:"))
         self.clear_button.setText(_translate("MainWindow", "Очистить"))
         self.load_label.setText(_translate("MainWindow", "Загруженное изображение автомобиля:"))
         self.export_data_button.setText(_translate("MainWindow", "Экспорт данных"))
@@ -197,4 +230,4 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:\'Century Gothic\'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;\"><br /></p></body></html>"))
         self.recognize_num_button.setText(_translate("MainWindow", "Распознать номер"))
-        self.history_label.setText(_translate("MainWindow", "История распознаваний:"))
+        self.base_of_nums_button.setText(_translate("MainWindow", "Загрузить базу с номерами"))
