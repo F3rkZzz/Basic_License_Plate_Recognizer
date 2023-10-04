@@ -2,7 +2,7 @@ import os
 import sys
 import csv
 import datetime
-from design_v2 import *
+from design import *
 from tf_recognizer import *
 from PyQt5 import QtCore, QtGui, QtWidgets
 
